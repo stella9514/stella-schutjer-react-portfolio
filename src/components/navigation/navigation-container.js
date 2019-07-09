@@ -1,6 +1,6 @@
-import React, { Comment } from 'react';
+import React, { Component } from 'react';
 
-export default class NavigationComponent extends Component {
+export default class NavigationContainer extends Component {
     constructor() {
         super();
     }
@@ -12,7 +12,7 @@ export default class NavigationComponent extends Component {
                 <button>About</button>
                 <button>Contact</button>
                 <button>Blog</button>
-                <button>Add Blog</button>
+                {false ? <button>Add Blog</button> : null }
             </div>
         );
     }
