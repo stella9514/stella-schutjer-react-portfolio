@@ -10,10 +10,10 @@ export default class PortfolioContainer extends Component {
             pageTitle: 'Welcome to my portfolio',
             isLoading: false,
             data: [
-                {title:'SomeData', category: '0data'},
-                {title:'SomeMoreData', category: '1data'},
-                {title:'EvenMoreData', category: '2data'},
-                {title:'OneMoreStringOfData', category: '3data'}
+                {title:'SomeData', category: '0data', slug: 'SomeData'},
+                {title:'SomeMoreData', category: '1data' slug: 'SomeMoreData'},
+                {title:'EvenMoreData', category: '2data' slug: 'EvenMoreData'},
+                {title:'OneMoreStringOfData', category: '3data' slug: 'OneMoreStringOfData'}
             ]
         };
     
