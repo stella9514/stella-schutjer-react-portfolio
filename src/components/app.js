@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import PortfolioContainer from './portfolio/portfolio-container';
 import NavigationContainer from './navigation/navigation-container';
 import Home from './pages/home';
-import Home from './pages/about';
+import About from './pages/about';
 
 export default class App extends Component {
   render() {
@@ -15,10 +15,10 @@ export default class App extends Component {
           <div>
             <NavigationContainer />
           
-            <switch>
+            <Switch>
               <Route exact path= "/" component={Home} />
               <Route exact path= "/about-me" component={About} />
-            </switch>
+            </Switch>
           </div>
         </Router>
 
