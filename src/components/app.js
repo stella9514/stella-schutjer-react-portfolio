@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 
-import PorfolioContainer from './portfolio/portfolio-container';
-import PorfolioContainer from './NavigationContainer/navigation-container';
+import PortfolioContainer from './portfolio/portfolio-container';
+import PortfolioContainer from './navigation/navigation-container';
 
 export default class App extends Component {
   render() {
