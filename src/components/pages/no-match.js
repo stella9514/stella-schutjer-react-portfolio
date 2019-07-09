@@ -7,5 +7,5 @@ export default function() {
             <h2>No Matches Found</h2>
             <Link to="/">Return to Homepage?</Link>
         </div>
-    )
+    );
 }
