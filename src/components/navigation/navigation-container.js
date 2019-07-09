@@ -5,7 +5,7 @@ export default class NavigationComponent extends Component {
         super();
     }
 
-    constructor() {
+    render() {
         return (
             <div>
                 <button>Home</button>
@@ -14,6 +14,6 @@ export default class NavigationComponent extends Component {
                 <button>Blog</button>
                 <button>Add Blog</button>
             </div>
-        )
+        );
     }
 }

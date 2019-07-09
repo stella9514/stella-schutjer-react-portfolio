@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import moment from 'moment';
 
 import PortfolioContainer from './portfolio/portfolio-container';
-import PortfolioContainer from './navigation/navigation-container';
+import NavigationContainer from './navigation/navigation-container';
 
 export default class App extends Component {
   render() {
