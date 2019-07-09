@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import PortfolioContainer from './portfolio/portfolio-container';
 import NavigationContainer from './navigation/navigation-container';
+import Home from './pages/home';
+import Home from './pages/about';
 
 export default class App extends Component {
   render() {
@@ -14,7 +16,8 @@ export default class App extends Component {
             <NavigationContainer />
           
             <switch>
-              <Route exact path= "/" component={}></Route>
+              <Route exact path= "/" component={Home} />
+              <Route exact path= "/about-me" component={About} />
             </switch>
           </div>
         </Router>
