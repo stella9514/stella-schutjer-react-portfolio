@@ -16,8 +16,8 @@ export default class App extends Component {
             <NavigationContainer />
           
             <Switch>
-              <Route exact path= "/" component={Home} />
-              <Route exact path= "/about-me" component={About} />
+              <Route exact path="/" component={Home} />
+              <Route path="/about-me" component={About} />
             </Switch>
           </div>
         </Router>
