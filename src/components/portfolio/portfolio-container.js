@@ -11,9 +11,9 @@ export default class PortfolioContainer extends Component {
             isLoading: false,
             data: [
                 {title:'SomeData', category: '0data', slug: 'SomeData'},
-                {title:'SomeMoreData', category: '1data' slug: 'SomeMoreData'},
-                {title:'EvenMoreData', category: '2data' slug: 'EvenMoreData'},
-                {title:'OneMoreStringOfData', category: '3data' slug: 'OneMoreStringOfData'}
+                {title:'SomeMoreData', category: '1data', slug: 'SomeMoreData'},
+                {title:'EvenMoreData', category: '2data', slug: 'EvenMoreData'},
+                {title:'OneMoreStringOfData', category: '3data', slug: 'OneMoreStringOfData'}
             ]
         };
     
@@ -30,7 +30,7 @@ export default class PortfolioContainer extends Component {
 
     portfolioItems() {
         return this.state.data.map(item => {
-            return <PortfolioItem title={item.title} url={'google.com'} />;
+            return <PortfolioItem title={item.title} url={'google.com'} slug={item.slug}/>;
         });
     }
 
