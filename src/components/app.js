@@ -14,7 +14,7 @@ export default class App extends Component {
             <NavigationContainer />
           
             <switch>
-              <Route exact path= "/" component={}>
+              <Route exact path= "/" component={}></Route>
             </switch>
           </div>
         </Router>
