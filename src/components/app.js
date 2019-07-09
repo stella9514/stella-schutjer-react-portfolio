@@ -9,12 +9,14 @@ export default class App extends Component {
   render() {
     return (
       <div className='app'>
-        <NavigationContainer />
-
         <Router>
-        <div>
-
-        </div>
+          <div>
+            <NavigationContainer />
+          
+            <switch>
+              <Route exact path= "/" component={}>
+            </switch>
+          </div>
         </Router>
 
         <h1>Stella Schutjer Portfolio</h1>
