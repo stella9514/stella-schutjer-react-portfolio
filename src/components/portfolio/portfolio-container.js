@@ -28,7 +28,6 @@ export default class PortfolioContainer extends Component {
         axios
           .get('https://stellaschutjer.devcamp.space/portfolio/portfolio_items')
           .then(response => {
-             console.log("response data", response);
              this.setState({
                  data: response.data.portfolio_items
              })
@@ -40,7 +39,14 @@ export default class PortfolioContainer extends Component {
 
     portfolioItems() {
         return this.state.data.map(item => {
-            return <PortfolioItem title={item.title} url={'google.com'} slug={item.slug}/>;
+            return (
+                <PortfolioItem 
+                    key={item.id} 
+                    title={item.name} 
+                    url={item.url} 
+                    slug={item.id}
+                />
+            );
         });
     }
 
