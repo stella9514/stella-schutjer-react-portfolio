@@ -39,13 +39,7 @@ export default class PortfolioContainer extends Component {
 
     portfolioItems() {
         return this.state.data.map(item => {
-            debugger;
-            return (
-                <PortfolioItem 
-                    key={item.id} 
-                    item={item}
-                />
-            );
+            return <PortfolioItem key={item.id} item={item} />;
         });
     }
 
@@ -75,7 +69,7 @@ export default class PortfolioContainer extends Component {
                     3data
                 </button>
 
-                {this.portfolioItems()}
+                <div className="portfolio-items-wrapper">{this.portfolioItems()}</div>
             </div>
         );
     }
