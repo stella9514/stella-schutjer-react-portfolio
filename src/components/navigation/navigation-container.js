@@ -10,25 +10,25 @@ export default class NavigationContainer extends Component {
         return (
             <div className="nav-wrapper">
                 <div className="left-side">
-                    <div className="nav-link-wrapper">
+                    <div className="nav-link-wrapper" activeClassName="nav-link-active">
                         <NavLink exact to='/'>
                             Home
                         </NavLink>
                     </div>
 
-                    <div className="nav-link-wrapper">
+                    <div className="nav-link-wrapper" activeClassName="nav-link-active">
                         <NavLink to='/about-me'>
                             About
                         </NavLink>
                     </div>
                     
-                    <div className="nav-link-wrapper">
+                    <div className="nav-link-wrapper" activeClassName="nav-link-active">
                         <NavLink to='/contact'>
                             Contact
                         </NavLink>
                     </div>
                     
-                    <div className="nav-link-wrapper">
+                    <div className="nav-link-wrapper" activeClassName="nav-link-active">
                         <NavLink to='/blog'>
                             Blog
                         </NavLink>
