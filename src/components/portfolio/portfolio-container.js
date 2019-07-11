@@ -61,9 +61,9 @@ export default class PortfolioContainer extends Component {
                     Scheduling
                 </button>
                 <button className="btn" onClick={() => this.handleFilter('2data')}>
-                    
-                </button>
                     Enterprise
+                </button>
+                    
                 {this.portfolioItems()}
             </div>
         );
