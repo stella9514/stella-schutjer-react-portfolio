@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import Axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import NavigationContainer from './navigation/navigation-container';
@@ -30,7 +30,6 @@ export default class App extends Component {
             </Switch>
           </div>
         </Router>
-
       </div>
     );
   }
