@@ -27,9 +27,9 @@ export default class NavigationContainer extends Component {
                     </NavLink>
                     
                     {false ? <button>Add Blog</button> : null }
-                    </div>
+                </div>
 
-                    <div className="right-side">
+                <div className="right-side">
                     STELLA SCHUTJER
                 </div>
             </div>
