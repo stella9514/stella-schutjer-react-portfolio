@@ -6,4 +6,11 @@
     .left-column {
         background-size: cover;
     }
+
+    .right-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $offwhite;
+    }
 }
