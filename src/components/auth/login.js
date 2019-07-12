@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { runInThisContext } from 'vm';
 
 export default class Login extends Component {
     constructor(props) {
@@ -6,7 +7,7 @@ export default class Login extends Component {
 
         this.state = {
             email: "",
-            password: "",
+            password: ""
         };
     
         this.handleChange = this.handleChange.bind(this);
@@ -14,7 +15,9 @@ export default class Login extends Component {
     }
 
     HandleChange(event) {
-        console.log("handle change", event);
+        this.setState({
+            event.target.name
+        })
     }
     
     handleSubmit(event) {
@@ -28,19 +31,19 @@ export default class Login extends Component {
 
                 <form onSubmit={this.handleSubmit}>
                     <input
-                     type="email"
-                     name="email"
-                     placeholder="Your email"
-                     value={this.state.email}
-                     onChange={this.handleChange}
+                        type="email"
+                        name="email"
+                        placeholder="Your email"
+                        value={this.state.email}
+                        onChange={this.handleChange}
                     />
 
                     <input 
-                     type="password"
-                     name="password"
-                     placeholder="Your password"
-                     value={this.state.password}
-                     onChange={this.handleChange}
+                        type="password"
+                        name="password"
+                        placeholder="Your password"
+                        value={this.state.password}
+                        onChange={this.handleChange}
                     />
 
                     <div>
