@@ -9,8 +9,8 @@ export default class Login extends Component {
             password: "",
         };
     
-        this.HandleChange= this.HandleChange.bind(this);
-        this.HandleSubmit= this.HandleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     HandleChange(event) {
@@ -32,7 +32,7 @@ export default class Login extends Component {
                      name="email"
                      placeholder="Your email"
                      value={this.state.email}
-                     onChange={this.HandleChange}
+                     onChange={this.handleChange}
                     />
 
                     <input 
@@ -40,7 +40,7 @@ export default class Login extends Component {
                      name="password"
                      placeholder="Your password"
                      value={this.state.password}
-                     onChange={this.HandleChange}
+                     onChange={this.handleChange}
                     />
 
                     <div>
