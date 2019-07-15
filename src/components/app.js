@@ -40,7 +40,7 @@ export default class App extends Component {
       .get("https://api.devcamp.space/logged_in", { 
         withCredentials: true
       })
-      .then(_response => {
+      .then(response => {
         const loggedIn = response.data.logged_in;
         const loggedInStatus = this.state.loggedInStatus;
 
@@ -70,7 +70,7 @@ export default class App extends Component {
       <div className='container'>
         <Router>
           <div>
-            <NavigationContainer />
+            <NavigationContainer loggedInStatus={this.state.loggedInStatus}/>
 
             <h2>{this.state.loggedInStatus}</h2>
           
