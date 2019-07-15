@@ -36,32 +36,33 @@ export default class App extends Component {
   }
 
   checkLoginStatus() {
-    return axios.get("https://api.devcamp.space/logged_in", { 
-      withCredentials: true
-    })
-    .then(_response => {
-      const loggedIn = response.data.logged_in;
-      const loggedInStatus = this.state.loggedInStatus;
+    return axios
+      .get("https://api.devcamp.space/logged_in", { 
+        withCredentials: true
+      })
+      .then(_response => {
+        const loggedIn = response.data.logged_in;
+        const loggedInStatus = this.state.loggedInStatus;
 
-      // If loggedIn and status LOGGED_IN => return data
-      // If loggedIn status NOT_LOGGED_IN => return state
-      // If not loggedIn status LOGGED_IN => update state
+        // If loggedIn and status LOGGED_IN => return data
+        // If loggedIn status NOT_LOGGED_IN => return state
+        // If not loggedIn status LOGGED_IN => update state
 
-      if (loggedIn && loggedInStatus === "LOGGED_IN" ) {
-        return loggedIn;
-      } else if (loggedIn && loggedInStatus === "NOT_LOGGED_IN") {
-        this.setState({
-          loggedInStatus: "LOGGED_IN"
-        });
-      } else if (!loggedIn && loggedInStatus === "LOGGED_IN") {
-        this.setState({
-          loggedInStatus: "NOT_LOGGED_IN"
-        });
-      }
-    })
-    .catch(error => {
-      console.log("Error", error);
-    });
+        if (loggedIn && loggedInStatus === "LOGGED_IN" ) {
+          return loggedIn;
+        } else if (loggedIn && loggedInStatus === "NOT_LOGGED_IN") {
+          this.setState({
+            loggedInStatus: "LOGGED_IN"
+          });
+        } else if (!loggedIn && loggedInStatus === "LOGGED_IN") {
+          this.setState({
+            loggedInStatus: "NOT_LOGGED_IN"
+          });
+        }
+      })
+      .catch(error => {
+        console.log("Error", error);
+      });
   }
 
   componentDidMount() {
