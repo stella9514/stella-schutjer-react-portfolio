@@ -17,9 +17,9 @@ export default class PortfolioManager extends Component {
     }
 
     handleSuccessfulFormSubmission(portfolioItem) {
-        // TODO
-        // update the portfolioItems state
-        // and add the portfolioItem tot the list
+        this.setState({
+            portfolioItems: [portfolioItem].concat(this.state.portfolioItems)
+        });
     }
 
     handleFormSubmissionError(error) {
@@ -28,7 +28,7 @@ export default class PortfolioManager extends Component {
 
     getPortfolioItems() {
         axios
-            .get("https://stellaschutjer.devcamp.space/portfolio/portfolio_items", {
+            .get("https://stellaschutjer.devcamp.space/portfolio/portfolio_items?order_by=created_at&direction=desc", {
                 withCredentials : true 
             })
             .then(response => {
@@ -37,7 +37,7 @@ export default class PortfolioManager extends Component {
                 });
             })
             .catch(error => {
-                console.log("error in getPortfolioItems", error)
+                console.log("error in getPortfolioItems", error);
             });
     } 
 
