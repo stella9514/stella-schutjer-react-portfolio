@@ -71,8 +71,9 @@ export default class BlogForm extends Component {
                         value={this.state.blog_status}
                     />
 
-                    <button className="btn">Save</button>
                 </div>
+                
+                <button className="btn">Save</button>
             </form>
         );
     }

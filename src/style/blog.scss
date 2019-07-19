@@ -3,6 +3,10 @@
     flex-direction: column;
     align-items: center;
 
+    .new-blog-link {
+        position: absolute;
+    }
+
     .content-container {
         display: flex;
         flex-direction: column;
