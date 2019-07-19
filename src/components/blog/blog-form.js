@@ -54,7 +54,7 @@ export default class BlogForm extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit} className="blog-form-wrapper">
-                <div>
+                <div className="two-column">
                     <input 
                         type="text"
                         onChange={this.handleChange}
